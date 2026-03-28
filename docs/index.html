@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalina Aránguiz — Psicóloga Clínica</title>
+  <meta name="description" content="Psicóloga clínica titulada UC. Psicoterapia para adultos con enfoque integrativo, informado del trauma y basado en evidencia. Online y presencial en Providencia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Variables ─────────────────────────────────────────── */
+    :root {
+      --sage:       #4A7C5F;
+      --sage-dark:  #345A44;
+      --sage-light: #EBF2EC;
+      --earth:      #8A6B52;
+      --earth-dark: #6E5240;
+      --sand:       #F6F1EA;
+      --gray-bg:    #F8F8F6;
+      --text:       #1C1C1C;
+      --text-mid:   #4A4A4A;
+      --text-light: #6B6B6B;
+      --white:      #FFFFFF;
+      --border:     #E0DAD0;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+
+      --max-w:  1060px;
+      --radius: 12px;
+    }
+
+    /* ── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img  { max-width: 100%; display: block; }
+    a    { color: inherit; text-decoration: none; }
+
+    /* ── Utilidades ─────────────────────────────────────────── */
+    .container   { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    .section     { padding: 88px 0; }
+    .section-alt  { background: var(--gray-bg); }
+    .section-sand { background: var(--sand); }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--earth);
+      margin-bottom: 14px;
+    }
+    h2.section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-mid);
+      max-width: 540px;
+      margin-bottom: 52px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--sage-dark);
+      letter-spacing: -0.01em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sage); }
+    .nav-cta {
+      background: var(--sage) !important;
+      color: var(--white) !important;
+      padding: 8px 18px !important;
+      border-radius: 6px !important;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--sage-dark) !important; }
+
+    /* ── HERO ───────────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(140deg, var(--sage-dark) 0%, var(--sage) 55%, #5E9E78 100%);
+      color: var(--white);
+      padding: 96px 0 80px;
+      overflow: hidden;
+      position: relative;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 18px;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: rgba(255,255,255,0.82);
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 32px;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.9);
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--earth);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--earth-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-photo-placeholder {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 3px solid rgba(255,255,255,0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-align: center;
+      gap: 8px;
+    }
+    .hero-photo-placeholder svg { opacity: 0.4; }
+    .hero-photo-ring {
+      position: absolute;
+      inset: -14px;
+      border-radius: 50%;
+      border: 2px dashed rgba(255,255,255,0.2);
+    }
+    .hero-card {
+      margin-top: 48px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .hero-card-name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .hero-card-role {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+    }
+    .hero-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .hero-card-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ── RECONOCIMIENTO ─────────────────────────────────────── */
+    #reconocimiento {
+      background: var(--sand);
+    }
+    .reconocimiento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .recono-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .recono-item:hover {
+      border-color: var(--sage);
+      box-shadow: 0 4px 16px rgba(74,124,95,0.08);
+    }
+    .recono-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--sage);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+    .recono-text {
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .recono-cta {
+      text-align: center;
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .recono-cta p {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    /* ── SOBRE MÍ ───────────────────────────────────────────── */
+    #sobre-mi .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .sobre-text p {
+      color: var(--text-mid);
+      margin-bottom: 18px;
+      font-size: 0.975rem;
+    }
+    .sobre-text strong { color: var(--text); }
+    .pilares-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .pilar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: border-color 0.2s;
+    }
+    .pilar-item:hover { border-color: var(--sage); }
+    .pilar-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--sage-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .pilar-title {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+    .pilar-detail {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      line-height: 1.55;
+    }
+    .pilar-badge {
+      display: inline-block;
+      background: var(--sage-light);
+      color: var(--sage-dark);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+
+    /* ── ÁREAS ──────────────────────────────────────────────── */
+    #areas .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .area-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: box-shadow 0.25s, transform 0.2s, border-color 0.2s;
+    }
+    .area-card:hover {
+      box-shadow: 0 8px 32px rgba(74,124,95,0.1);
+      transform: translateY(-2px);
+      border-color: var(--sage);
+    }
+    .area-icon {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .area-name {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .area-desc {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ── MÉTODO ─────────────────────────────────────────────── */
+    #metodo {
+      background: var(--sage-dark);
+      color: var(--white);
+    }
+    #metodo .eyebrow { color: rgba(255,255,255,0.55); }
+    #metodo h2.section-title { color: var(--white); }
+    #metodo .section-sub { color: rgba(255,255,255,0.7); }
+    .metodo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .metodo-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      transition: background 0.2s;
+    }
+    .metodo-card:hover { background: rgba(255,255,255,0.11); }
+    .metodo-num {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.18);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .metodo-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .metodo-text {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.65;
+    }
+    .metodo-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ── PROCESO ────────────────────────────────────────────── */
+    #proceso .proceso-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    #proceso .proceso-steps::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(to right, var(--sage-light), var(--sage), var(--sage-light));
+      z-index: 0;
+    }
+    .paso {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .paso-num {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: var(--white);
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 16px rgba(74,124,95,0.25);
+    }
+    .paso-title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .paso-text {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ── ESPERAR ────────────────────────────────────────────── */
+    #esperar .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .acc-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .acc-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      background: var(--white);
+      cursor: pointer;
+      border: none;
+      text-align: left;
+      transition: background 0.2s;
+      gap: 16px;
+    }
+    .acc-header:hover { background: var(--gray-bg); }
+    .acc-header.open { background: var(--sage-light); }
+    .acc-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .acc-icon-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--sage);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .acc-header.open .acc-icon-num { background: var(--sage-dark); }
+    .acc-label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .acc-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--text-light);
+      transition: transform 0.25s;
+    }
+    .acc-header.open .acc-chevron { transform: rotate(180deg); }
+    .acc-body {
+      display: none;
+      padding: 0 24px 22px 72px;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      background: var(--white);
+    }
+    .acc-body.open { display: block; }
+
+    /* ── INFO PRÁCTICA ──────────────────────────────────────── */
+    #info-practica {
+      background: var(--sand);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .info-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+    .info-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--sage-light);
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 16px;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .info-value {
+      font-size: 0.9rem;
+      color: var(--text);
+      text-align: right;
+    }
+    .info-value strong {
+      font-size: 1.05rem;
+      color: var(--sage-dark);
+    }
+    .info-nota {
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      font-style: italic;
+      line-height: 1.55;
+    }
+    .info-cta-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .info-cta-card p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .btn-sage {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sage);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+      width: fit-content;
+    }
+    .btn-sage:hover { background: var(--sage-dark); transform: translateY(-1px); }
+
+    /* ── FAQ ────────────────────────────────────────────────── */
+    #faq .faq-wrap {
+      max-width: 720px;
+    }
+
+    /* ── CTA FINAL ──────────────────────────────────────────── */
+    #cta-final {
+      background: linear-gradient(140deg, var(--sage-dark) 0%, var(--sage) 100%);
+      color: var(--white);
+      padding: 96px 0;
+    }
+    .cta-inner {
+      max-width: 680px;
+    }
+    #cta-final .eyebrow { color: rgba(255,255,255,0.55); }
+    .cta-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .cta-text {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 580px;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--sage-dark);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-white:hover { background: var(--sand); transform: translateY(-1px); }
+    .cta-contact-link {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.75);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .cta-contact-link:hover { color: var(--white); }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: #1A1A1A;
+      color: rgba(255,255,255,0.45);
+      padding: 32px 0;
+      font-size: 0.8rem;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-name {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-inner                { grid-template-columns: 1fr; gap: 40px; }
+      .hero-photo-wrap           { display: none; }
+      #sobre-mi .sobre-grid      { grid-template-columns: 1fr; gap: 40px; }
+      .areas-grid                { grid-template-columns: repeat(2, 1fr) !important; }
+      .metodo-grid               { grid-template-columns: 1fr !important; }
+      #proceso .proceso-steps    { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      #proceso .proceso-steps::before { display: none; }
+      .reconocimiento-grid       { grid-template-columns: repeat(2, 1fr); }
+      .info-grid                 { grid-template-columns: 1fr; }
+      .nav-links li:not(:last-child) { display: none; }
+    }
+    @media (max-width: 600px) {
+      .section                   { padding: 64px 0; }
+      .areas-grid                { grid-template-columns: 1fr !important; }
+      .reconocimiento-grid       { grid-template-columns: 1fr; }
+      #proceso .proceso-steps    { grid-template-columns: 1fr; gap: 24px; }
+      .hero-actions              { flex-direction: column; }
+      .cta-actions               { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">Catalina Aránguiz</span>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#areas">Áreas</a></li>
+      <li><a href="#metodo">Cómo trabajo</a></li>
+      <li><a href="#info-practica">Tarifas</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="https://encuadrado.com/p/maria-catalina-aranguizv" target="_blank" rel="noopener" class="nav-cta">Agendar sesión</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Texto -->
+      <div class="hero-content">
+        <p class="hero-eyebrow">Psicoterapia para adultos · Online y presencial · Providencia</p>
+        <h1 class="hero-title">
+          Un espacio para<br/>
+          <em>comprender lo que te pasa</em><br/>
+          y avanzar con apoyo
+        </h1>
+        <p class="hero-subtitle">
+          Acompaño a personas adultas en procesos terapéuticos desde un enfoque
+          integrativo, informado del trauma y centrado en ti — no en una fórmula genérica.
+        </p>
+        <div class="hero-badges">
+          <span class="badge">Titulada UC</span>
+          <span class="badge">Trauma &amp; Regulación emocional</span>
+          <span class="badge">Mindfulness aplicado</span>
+          <span class="badge">Basada en evidencia</span>
+        </div>
+        <div class="hero-actions">
+          <a href="https://encuadrado.com/p/maria-catalina-aranguizv" target="_blank" rel="noopener" class="btn-primary">
+            Agendar primera sesión →
+          </a>
+          <a href="#sobre-mi" class="btn-secondary">Conoce mi enfoque</a>
+        </div>
+      </div>
+
+      <!-- Foto -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>Foto profesional</span>
+        </div>
+        <div class="hero-photo-ring"></div>
+      </div>
+
+    </div>
+
+    <!-- Card flotante -->
+    <div class="hero-card" style="max-width:480px; margin-top:48px;">
+      <span class="hero-card-name">Catalina Aránguiz Soto</span>
+      <span class="hero-card-role">Psicóloga clínica mención UC · Experiencia clínica supervisada</span>
+      <div class="hero-card-tags">
+        <span class="hero-card-tag">Regulación emocional</span>
+        <span class="hero-card-tag">Trauma · TEPT</span>
+        <span class="hero-card-tag">Ansiedad</span>
+        <span class="hero-card-tag">Vínculos</span>
+        <span class="hero-card-tag">Duelo</span>
+        <span class="hero-card-tag">Autoestima</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ¿TE RECONOCES? ════════════════════════════════════════ -->
+<section id="reconocimiento" class="section section-sand">
+  <div class="container">
+    <span class="eyebrow">El punto de partida</span>
+    <h2 class="section-title">Tal vez estás atravesando<br/>un momento difícil</h2>
+    <p class="section-sub">
+      No hace falta estar en crisis para pedir ayuda. Muchas personas llegan porque algo no
+      está bien, aunque sea difícil de explicar con palabras.
+    </p>
+
+    <div class="reconocimiento-grid">
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Sientes que tus emociones a veces te sobrepasan y no sabes bien cómo manejarlas.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Te cuesta encontrar calma o estabilidad interna, incluso cuando las cosas "deberían" estar bien.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Te cuesta poner límites, pedir lo que necesitas o sentirte seguro/a en tus relaciones.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Has vivido experiencias dolorosas que, aunque hayan pasado, siguen afectando tu presente.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Te exiges mucho, te cuesta tratarte con amabilidad o sientes que nunca es suficiente.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Estás atravesando ansiedad, tristeza, estrés o un agotamiento que no logras sacudir.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Has perdido a alguien, una etapa de tu vida o una versión importante de ti mismo/a.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Funcionas hacia afuera, pero internamente te sientes agotado/a, sobrepasado/a o desconectado/a.</span>
+      </div>
+      <div class="recono-item">
+        <div class="recono-dot"></div>
+        <span class="recono-text">Quieres entenderte mejor, relacionarte de manera más sana y sentir mayor estabilidad interna.</span>
+      </div>
+    </div>
+
+    <div class="recono-cta">
+      <p>La terapia puede ser un espacio para detenerse, ordenar, comprender<br/>y comenzar a construir nuevas formas de relacionarte contigo mismo/a.</p>
+      <a href="https://encuadrado.com/p/maria-catalina-aranguizv" target="_blank" rel="noopener" class="btn-sage">
+        Quiero dar el primer paso →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOBRE MÍ ══════════════════════════════════════════════ -->
+<section id="sobre-mi" class="section">
+  <div class="container">
+    <div class="sobre-grid">
+
+      <!-- Texto -->
+      <div class="sobre-text">
+        <span class="eyebrow">Sobre mí</span>
+        <h2 class="section-title">Una psicóloga que se<br/><em style="font-style:italic;">forma sin parar</em></h2>
+        <p>
+          Soy psicóloga clínica de adultos, titulada de la <strong>Pontificia Universidad Católica de Chile</strong>.
+          Trabajo desde un <strong>enfoque integrativo</strong>: adapto el proceso terapéutico a las necesidades
+          de cada persona, combinando distintas herramientas según tu historia, tus objetivos y el momento
+          que estás atravesando.
+        </p>
+        <p>
+          En cada sesión, busco construir un espacio seguro, acogedor y libre de juicios, donde puedas
+          explorar tus pensamientos, emociones y experiencias con libertad. Mi objetivo es acompañarte
+          en un proceso que te permita comprenderte con mayor profundidad, fortalecer tus recursos
+          y enfrentar tus dificultades de manera más amable y sostenible.
+        </p>
+        <p>
+          Me interesa mantenerme actualizada. La investigación en psicología y psicoterapia me
+          importa porque me permite ofrecerte un acompañamiento basado en lo que realmente funciona.
+        </p>
+        <a href="https://www.linkedin.com/in/catalina-aranguiz-332661255" target="_blank" rel="noopener"
+           style="display:inline-flex; align-items:center; gap:6px; margin-top:8px; font-size:0.85rem; color:var(--sage); font-weight:600;">
+          Ver perfil profesional →
+        </a>
+      </div>
+
+      <!-- Credenciales / Pilares -->
+      <div class="pilares-stack">
+
+        <div class="pilar-item">
+          <div class="pilar-icon">🎓</div>
+          <div>
+            <div class="pilar-title">Formación de base</div>
+            <div class="pilar-detail">Psicóloga con mención clínica, egresada de la Pontificia Universidad Católica de Chile — una de las formaciones más exigentes del país en salud mental.</div>
+            <span class="pilar-badge">UC · Mención Clínica</span>
+          </div>
+        </div>
+
+        <div class="pilar-item">
+          <div class="pilar-icon">🏥</div>
+          <div>
+            <div class="pilar-title">Experiencia clínica supervisada</div>
+            <div class="pilar-detail">Formación en UC CHRISTUS (con rotaciones en Salud Mental Perinatal, Psicogerontología y Neuropsicología), PsiConecta Chile y consulta clínica activa desde 2025.</div>
+            <span class="pilar-badge">+2 años · Adultos</span>
+          </div>
+        </div>
+
+        <div class="pilar-item">
+          <div class="pilar-icon">🧠</div>
+          <div>
+            <div class="pilar-title">Especialización en trauma</div>
+            <div class="pilar-detail">Formación certificada en TEPT y TEPT Complejo, Primeros Auxilios Psicológicos (PAP), Mindfulness y Compasión aplicados a la clínica.</div>
+            <span class="pilar-badge">TEPT · PAP · Mindfulness</span>
+          </div>
+        </div>
+
+        <div class="pilar-item">
+          <div class="pilar-icon">🔬</div>
+          <div>
+            <div class="pilar-title">Investigación aplicada</div>
+            <div class="pilar-detail">Exposición en el I Congreso de Investigación Cualitativa en Salud (CEMIC). Interés activo en mantener la práctica clínica anclada en evidencia.</div>
+            <span class="pilar-badge">Basada en evidencia</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ÁREAS ═════════════════════════════════════════════════ -->
+<section id="areas" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Áreas de trabajo</span>
+    <h2 class="section-title">En qué te puedo acompañar</h2>
+    <p class="section-sub">
+      Acompaño procesos terapéuticos en distintas áreas, siempre adaptando el trabajo
+      a tus necesidades y objetivos específicos.
+    </p>
+
+    <div class="areas-grid">
+
+      <div class="area-card">
+        <div class="area-icon">🌊</div>
+        <div class="area-name">Regulación emocional</div>
+        <div class="area-desc">Cuando las emociones se sienten difíciles de manejar o de entender. Desarrollamos herramientas concretas para recuperar estabilidad interna.</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">🌿</div>
+        <div class="area-name">Trauma y experiencias difíciles</div>
+        <div class="area-desc">Trabajo especializado con experiencias pasadas que siguen teniendo impacto hoy — desde un abordaje informado del trauma, seguro y respetuoso.</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">💭</div>
+        <div class="area-name">Ansiedad y estrés</div>
+        <div class="area-desc">Esa sensación de alerta constante, el agotamiento que no cede, la dificultad para bajar la guardia. Trabajamos juntos para encontrar más calma.</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">☁️</div>
+        <div class="area-name">Depresión</div>
+        <div class="area-desc">Cuando la tristeza, el desánimo o la desconexión se instalan y hacen difícil seguir adelante. Acompañamiento empático y herramientas para recuperar movimiento.</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">🪞</div>
+        <div class="area-name">Autoestima e identidad</div>
+        <div class="area-desc">Comprender quién eres, qué necesitas y cómo tratarte con más amabilidad. Un proceso de construcción de una relación más segura contigo mismo/a.</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">🤝</div>
+        <div class="area-name">Relaciones interpersonales</div>
+        <div class="area-desc">Dificultades para poner límites, para confiar, para pedir lo que necesitas. Trabajamos los patrones relacionales que hoy te generan sufrimiento.</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">🍂</div>
+        <div class="area-name">Duelo y pérdida</div>
+        <div class="area-desc">La pérdida de alguien, de una etapa o de una versión de ti. Un espacio para elaborar con tiempo, sin presión de "ya deberías estar bien".</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">🌱</div>
+        <div class="area-name">Procesos de cambio vital</div>
+        <div class="area-desc">Transiciones que desestabilizan: nuevas etapas, decisiones difíciles, el peso de las expectativas propias o ajenas.</div>
+      </div>
+
+      <div class="area-card">
+        <div class="area-icon">🔋</div>
+        <div class="area-name">Agotamiento y malestar persistente</div>
+        <div class="area-desc">Funcionas, cumples, pero internamente estás en el límite. Ese desborde que no tiene nombre claro pero que está ahí.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÉTODO ════════════════════════════════════════════════ -->
+<section id="metodo" class="section">
+  <div class="container">
+    <span class="eyebrow">Mi forma de trabajar</span>
+    <h2 class="section-title">Tres pilares que guían el proceso</h2>
+    <p class="section-sub" style="color:rgba(255,255,255,0.7);">
+      No aplico una fórmula. El proceso terapéutico se adapta a ti, pero siempre
+      descansa en estos tres principios.
+    </p>
+
+    <div class="metodo-grid">
+
+      <div class="metodo-card">
+        <div class="metodo-num">01</div>
+        <div class="metodo-title">Enfoque integrativo</div>
+        <div class="metodo-text">
+          Combino herramientas de distintas corrientes psicológicas según lo que cada persona
+          necesita, en lugar de aplicar una sola técnica de manera rígida. Tu historia, tus objetivos
+          y el momento que estás viviendo determinan cómo trabajamos.
+        </div>
+        <span class="metodo-tag">Personalizado · Flexible</span>
+      </div>
+
+      <div class="metodo-card">
+        <div class="metodo-num">02</div>
+        <div class="metodo-title">Informado del trauma</div>
+        <div class="metodo-text">
+          Entiendo que muchas dificultades del presente tienen raíces en experiencias pasadas
+          que marcaron la manera de sentir, pensar y relacionarse. Trabajamos desde ese
+          reconocimiento, con cuidado y sin forzar nada.
+        </div>
+        <span class="metodo-tag">Seguro · Respetuoso del ritmo</span>
+      </div>
+
+      <div class="metodo-card">
+        <div class="metodo-num">03</div>
+        <div class="metodo-title">Mindfulness y autorregulación</div>
+        <div class="metodo-text">
+          Integro herramientas de mindfulness y compasión para ayudarte a desarrollar una
+          relación más amable con tus emociones y con lo que vives. No como práctica espiritual,
+          sino como herramienta clínica concreta.
+        </div>
+        <span class="metodo-tag">Basado en evidencia</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ EL PROCESO ════════════════════════════════════════════ -->
+<section id="proceso" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">El proceso terapéutico</span>
+    <h2 class="section-title">Cómo funciona trabajar juntos</h2>
+    <p class="section-sub">
+      Cada proceso es único, pero en general el camino sigue estos pasos.
+      El ritmo siempre lo marcas tú.
+    </p>
+
+    <div class="proceso-steps">
+
+      <div class="paso">
+        <div class="paso-num">1</div>
+        <div class="paso-title">Primera sesión</div>
+        <div class="paso-text">
+          Nos conocemos. Conversas sobre lo que te está pasando, sin presión
+          de tener todo claro. Evaluamos si hay sintonía y cómo podría ser el acompañamiento.
+        </div>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">2</div>
+        <div class="paso-title">Evaluación y encuadre</div>
+        <div class="paso-text">
+          Entendemos juntos qué te trajo a consulta, cuáles son tus objetivos y
+          cómo estructuramos el proceso. Acordamos frecuencia y modalidad.
+        </div>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">3</div>
+        <div class="paso-title">Proceso terapéutico</div>
+        <div class="paso-text">
+          El trabajo central: explorar, comprender patrones, desarrollar herramientas,
+          elaborar experiencias difíciles. Un espacio semanal para ti, construido a tu ritmo.
+        </div>
+      </div>
+
+      <div class="paso">
+        <div class="paso-num">4</div>
+        <div class="paso-title">Consolidación y cierre</div>
+        <div class="paso-text">
+          Los cambios se van consolidando. Revisamos el camino recorrido, fortalecemos
+          los recursos ganados y, cuando llega el momento, cerramos el proceso con sentido.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUÉ PUEDES ESPERAR ════════════════════════════════════ -->
+<section id="esperar" class="section">
+  <div class="container">
+    <span class="eyebrow">El espacio terapéutico</span>
+    <h2 class="section-title">Qué puedes esperar</h2>
+    <p class="section-sub">
+      Cada proceso es único, pero estas son las condiciones que siempre están presentes.
+    </p>
+
+    <div class="accordion">
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num">1</span>
+            <span class="acc-label">Un espacio confidencial, seguro y sin juicios</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          Lo que converses en sesión queda ahí. Puedes hablar con libertad sobre lo que te ocurre,
+          sintiéndote acompañado/a y sin ser juzgado/a por lo que sientes, piensas o has vivido.
+          La confidencialidad es un principio ético no negociable.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num">2</span>
+            <span class="acc-label">Un ritmo acorde a ti — no tienes que llegar con todo ordenado</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          No necesitas saber exactamente qué te pasa ni tener las palabras correctas antes de empezar.
+          Parte del trabajo terapéutico consiste justamente en ir entendiendo, nombrando y ordenando
+          aquello que hoy se siente confuso o difícil de explicar.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num">3</span>
+            <span class="acc-label">Un proceso personalizado — no una fórmula genérica</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          Cada persona tiene una historia, un contexto y necesidades distintas. El proceso se ajusta
+          a lo que tú necesitas, tus objetivos y tus recursos — no a un protocolo estándar.
+          Trabajo así por convicción, no por marketing.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num">4</span>
+            <span class="acc-label">Un trabajo conjunto — no solo hablar de lo que duele</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          La terapia no es solo nombrar el dolor. También es ir construyendo nuevas maneras de
+          comprenderte, cuidarte y relacionarte — con herramientas concretas, no solo comprensión.
+          Equilibramos profundidad con acción.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num">5</span>
+            <span class="acc-label">Cambios graduales, pero reales</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          A veces el primer cambio no es dejar de sufrir de inmediato. Es empezar a sentirte más
+          comprendido/a, con más claridad sobre lo que te ocurre, con un poco más de herramientas
+          para el día a día. Los cambios duraderos se construyen desde ahí.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ INFO PRÁCTICA ═════════════════════════════════════════ -->
+<section id="info-practica" class="section section-sand">
+  <div class="container">
+    <span class="eyebrow">Información práctica</span>
+    <h2 class="section-title">Todo lo que necesitas saber antes de empezar</h2>
+    <p class="section-sub">Sin sorpresas. La transparencia es parte del encuadre.</p>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-card-title">Modalidad y formato</div>
+        <div class="info-row">
+          <span class="info-label">Modalidad</span>
+          <span class="info-value">Online y presencial</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Lugar presencial</span>
+          <span class="info-value">Providencia, Santiago</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Duración sesión</span>
+          <span class="info-value">50 minutos</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Frecuencia</span>
+          <span class="info-value">Semanal (a conversar según cada caso)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Pacientes</span>
+          <span class="info-value">Adultos</span>
+        </div>
+        <p class="info-nota">
+          La frecuencia y modalidad se acuerdan en la primera sesión de acuerdo a tus necesidades y disponibilidad.
+        </p>
+      </div>
+
+      <div class="info-card info-cta-card">
+        <div>
+          <div class="info-card-title">Tarifas</div>
+          <div class="info-row">
+            <span class="info-label">Particular</span>
+            <span class="info-value"><strong>$30.000</strong> / sesión</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Fonasa</span>
+            <span class="info-value">Consultar disponibilidad</span>
+          </div>
+          <p class="info-nota">
+            Si tienes dudas sobre formas de pago o cobertura, puedes escribirme directamente
+            antes de agendar. No quiero que el aspecto económico sea un obstáculo sin antes conversarlo.
+          </p>
+        </div>
+        <div style="margin-top:28px;">
+          <a href="https://encuadrado.com/p/maria-catalina-aranguizv" target="_blank" rel="noopener" class="btn-sage">
+            Agendar en Encuadrado →
+          </a>
+          <p style="margin-top:12px; font-size:0.8rem; color:var(--text-light);">
+            O escríbeme a
+            <a href="mailto:ps.mcaranguiz@gmail.com" style="color:var(--sage); font-weight:600;">ps.mcaranguiz@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ═══════════════════════════════════════════════════ -->
+<section id="faq" class="section">
+  <div class="container">
+    <span class="eyebrow">Preguntas frecuentes</span>
+    <h2 class="section-title">Lo que más me preguntan</h2>
+    <p class="section-sub">Respuestas directas a las dudas más comunes antes de comenzar.</p>
+
+    <div class="accordion faq-wrap">
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num" style="background:var(--earth);">?</span>
+            <span class="acc-label">¿Cómo sé si necesito terapia?</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          No es necesario estar en una crisis extrema para pedir ayuda. Muchas personas consultan
+          porque se sienten sobrepasadas, repiten ciertos patrones que les generan sufrimiento,
+          están pasando por una etapa difícil o simplemente quieren comprenderse mejor.
+          Si algo no está bien y sientes que quieres un espacio para entenderlo, eso es suficiente razón.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num" style="background:var(--earth);">?</span>
+            <span class="acc-label">¿Tengo que llegar sabiendo explicar todo lo que me pasa?</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          No. No necesitas tener todo ordenado ni las palabras correctas antes de empezar.
+          La terapia también puede ayudarte a poner en palabras lo que hoy se siente confuso
+          o difícil de entender. Llegar con "no sé bien qué me pasa, pero algo no está bien"
+          es perfectamente válido.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num" style="background:var(--earth);">?</span>
+            <span class="acc-label">¿Cuánto dura un proceso terapéutico?</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          Depende de cada persona y del motivo de consulta. Algunas personas buscan acompañamiento
+          para una dificultad específica y trabajan durante algunos meses. Otras inician procesos
+          más profundos o de mayor duración. Lo conversamos al inicio y lo vamos revisando juntos
+          a medida que avanzamos.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num" style="background:var(--earth);">?</span>
+            <span class="acc-label">¿La terapia es solo para hablar del pasado?</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          No. A veces mirar la historia es importante para entender el presente, pero también
+          trabajamos con lo que te pasa hoy: tus vínculos actuales, tus emociones, tus patrones
+          cotidianos y herramientas concretas para el día a día.
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-header" onclick="toggleAcc(this)">
+          <div class="acc-title-wrap">
+            <span class="acc-icon-num" style="background:var(--earth);">?</span>
+            <span class="acc-label">¿La terapia online funciona igual que la presencial?</span>
+          </div>
+          <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="acc-body">
+          Sí. La evidencia muestra que la psicoterapia online es igual de efectiva que la presencial
+          para la mayoría de las personas y motivos de consulta. Lo importante es que tengas un
+          espacio privado y tranquilo. Ambas modalidades están disponibles; puedes elegir la que
+          mejor se ajuste a tu rutina.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ═════════════════════════════════════════════ -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="eyebrow">Dar el primer paso</span>
+      <h2 class="cta-title">
+        No tienes que seguir<br/>sosteniéndolo todo solo/a
+      </h2>
+      <p class="cta-text">
+        Si llevas tiempo sintiéndote en alerta, que ciertas heridas siguen apareciendo o que
+        te has exigido demasiado para poder seguir adelante — este espacio puede ser para ti.
+        La terapia puede ser un lugar para empezar a comprender lo que te pasa con mayor
+        profundidad y construir una relación más segura contigo mismo/a.
+      </p>
+      <div class="cta-actions">
+        <a href="https://encuadrado.com/p/maria-catalina-aranguizv" target="_blank" rel="noopener" class="btn-white">
+          Agendar primera sesión →
+        </a>
+        <a href="mailto:ps.mcaranguiz@gmail.com" class="cta-contact-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          ps.mcaranguiz@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Catalina Aránguiz — Psicóloga Clínica</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/catalina-aranguiz-332661255" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:ps.mcaranguiz@gmail.com">Contacto</a>
+      <a href="https://encuadrado.com/p/maria-catalina-aranguizv" target="_blank" rel="noopener">Agendar</a>
+    </div>
+    <span>Reg. Metropolitana · Online y Providencia</span>
+  </div>
+</footer>
+
+<!-- ══ JS ════════════════════════════════════════════════════ -->
+<script>
+  function toggleAcc(btn) {
+    const body = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+
+    // Cierra todos los de este accordion
+    const parent = btn.closest('.accordion');
+    parent.querySelectorAll('.acc-header').forEach(h => h.classList.remove('open'));
+    parent.querySelectorAll('.acc-body').forEach(b => b.classList.remove('open'));
+
+    if (!isOpen) {
+      btn.classList.add('open');
+      body.classList.add('open');
+    }
+  }
+</script>
+
+</body>
+</html>
