@@ -1,7 +1,7 @@
 # PROJECT_BRIEF.md — consulta-cata
 > Estado actual del proyecto. Actualizar al cierre de cada sesión.
 
-**Última actualización:** 28 marzo 2026 (sesión 1)
+**Última actualización:** 29 marzo 2026 (sesión 1 — cierre)
 
 ---
 
@@ -14,35 +14,45 @@
 
 ---
 
-## Stack (objetivo — mismo patrón que consuelo-hr)
+## Stack
 
 | Componente | Tecnología | Estado |
 |------------|------------|--------|
-| Frontend | HTML/CSS/JS vanilla | Creado, pendiente deploy |
-| Hosting | GitHub Pages (`docs/` branch main) | Pendiente |
-| Dominio | TBD | Pendiente |
+| Frontend | HTML/CSS/JS vanilla | Deployado en GitHub Pages |
+| Hosting | GitHub Pages (`docs/` branch main) | Activo |
+| URL directa | https://ignacio-aranguiz.github.io/consulta-cata/ | Activo |
+| Dominio custom | TBD | Pendiente |
 | DNS | Cloudflare (Free) | Pendiente |
 | Backend formulario | No aplica — usa Encuadrado para agendamiento | — |
 
 ---
 
-## Estado actual
+## URLs y repos clave
+
+- **Repo GitHub:** https://github.com/ignacio-aranguiz/consulta-cata
+- **GitHub Pages (URL directa):** https://ignacio-aranguiz.github.io/consulta-cata/
+- **Dominio custom:** pendiente
+
+---
+
+## Estado actual (lo que está funcionando HOY)
 
 - [x] Directorio creado: `~/Projects/consulta-cata/`
-- [x] Inputs documentados en `inputs/`
-- [x] Landing page v1 creada en `docs/index.html`
-- [ ] Repo GitHub creado
-- [ ] GitHub Pages configurado
-- [ ] Dominio comprado
+- [x] Inputs documentados en `inputs/` (docx servicio + CV LinkedIn)
+- [x] Landing page v1 completa en `docs/index.html` — 10 secciones
+- [x] Repo GitHub creado: `ignacio-aranguiz/consulta-cata`
+- [x] GitHub Pages configurado (main / /docs) y activo
+- [x] Foto perfil circular en hero (`foto_cata.jpeg`)
+- [x] Imagen de fondo hero (`hero-cata.jpeg`) con overlay sage semitransparente
+- [ ] Dominio custom comprado
 - [ ] DNS configurado (Cloudflare)
-- [ ] Foto profesional de Cata agregada
 - [ ] Valor Fonasa confirmado y actualizado en la web
 
 ---
 
 ## Contenido del sitio (secciones — estructura consultiva)
 
-1. **Hero** — Propuesta de valor + identidad profesional clara
+1. **Hero** — Propuesta de valor + foto perfil circular + imagen de fondo real
 2. **¿Te reconoces?** — Espejo del momento del paciente (antes de hablar de la solución)
 3. **Sobre mí** — Credenciales en 4 pilares: formación UC, experiencia clínica, esp. trauma, investigación
 4. **Áreas** — 9 áreas de acompañamiento en grid de cards
@@ -59,12 +69,13 @@
 
 - **Paleta:** verde salvia (`#4A7C5F`) + tierra cálida (`#8A6B52`) + arena (`#F6F1EA`) + blanco
 - **Tipografía:** Cormorant Garamond (serif elegante) + Inter (sans limpio)
-- **Foto:** placeholder circular en hero — pendiente foto real de Catalina
+- **Foto perfil:** `docs/foto_cata.jpeg` — circular en hero
+- **Foto de fondo hero:** `docs/hero-cata.jpeg` — con overlay sage semitransparente
 - **Agendamiento:** link directo a Encuadrado (no hay formulario propio)
 
 ---
 
-## Decisiones de diseño tomadas
+## Decisiones tomadas
 
 | Decisión | Razón |
 |----------|-------|
@@ -73,15 +84,15 @@
 | Paleta verde salvia (distinta a consuelo-hr) | Identidad propia para salud mental / calma / confianza |
 | Accordions para FAQ y "Qué esperar" | Solicitud explícita de Cata en el doc de inputs |
 | 4 pilares de credenciales (no solo "titulada UC") | Posiciona la especialización en trauma como diferenciador clave |
+| Foto LinkedIn como perfil y hero por ahora | Foto profesional formal pendiente para más adelante |
 
 ---
 
 ## Pendientes de contenido
 
-- [ ] Foto profesional de Catalina (reemplazar placeholder en hero)
-- [ ] Confirmar precio Fonasa
-- [ ] Confirmar dominio (¿consulta-cata.cl? ¿catalinaaranguiz.cl? ¿pscatalina.cl?)
-- [ ] Verificar email de contacto correcto (ps.mcaranguiz@gmail.com — confirmado en doc inputs)
+- [ ] Confirmar precio Fonasa → actualizar en sección "Info práctica"
+- [ ] Decidir dominio (ej. `catalinaaranguiz.cl`, `pscatalina.cl`) → comprar en NIC Chile
+- [ ] Foto profesional definitiva (actualmente usa fotos LinkedIn — ok por ahora)
 
 ---
 
@@ -92,6 +103,8 @@ consulta-cata/
 ├── PROJECT_BRIEF.md          ← este archivo
 ├── docs/
 │   ├── index.html            ← landing page (fuente de verdad del frontend)
+│   ├── foto_cata.jpeg        ← foto perfil circular (hero)
+│   ├── hero-cata.jpeg        ← imagen de fondo hero
 │   └── CNAME                 ← (crear cuando se tenga dominio)
 └── inputs/
     ├── info_servicio.md      ← contenido extraído del docx de Cata
@@ -100,7 +113,7 @@ consulta-cata/
 
 ---
 
-## Workflow de deploy (idéntico a consuelo-hr)
+## Workflow de deploy
 
 ```bash
 cd ~/Projects/consulta-cata
@@ -114,6 +127,6 @@ git push
 
 ## Próximos 3 pasos
 
-1. **Crear repo GitHub** `consulta-cata` y hacer primer push
-2. **Conseguir foto profesional** de Catalina para reemplazar el placeholder circular del hero
-3. **Decidir dominio** y comprarlo en NIC Chile → configurar Cloudflare → GitHub Pages
+1. **Decidir y comprar dominio** (Ignacio + Cata) → NIC Chile → configurar Cloudflare → agregar CNAME en repo
+2. **Confirmar precio Fonasa** (Cata) → actualizar línea correspondiente en `docs/index.html`
+3. **Revisar el sitio con Cata** → ajustes de tono, contenido o fotos según su feedback
